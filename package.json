@@ -1,0 +1,20 @@
+{
+  "name": "@web3/web3-contract-types-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "info@chainsafe.io",
+  "license": "MIT",
+  "scripts": {
+    "gen:type": "node -r ts-node/register ./scripts/gen-artifact-types ./src/artifacts",
+    "start": "node -r ts-node/register src/index.ts"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3",
+    "web3": "4.0.1-rc.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
