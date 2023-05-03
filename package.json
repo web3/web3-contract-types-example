@@ -5,7 +5,7 @@
   "author": "info@chainsafe.io",
   "license": "MIT",
   "scripts": {
-    "gen:type": "node -r ts-node/register ./scripts/gen-artifact-types ./src/artifacts",
+    "gen": "node -r ts-node/register ./scripts/gen-artifact-types ./src/artifacts",
     "start": "node -r ts-node/register src/index.ts"
   },
   "dependencies": {
