@@ -5,8 +5,6 @@ var destination = process.argv.slice(2)[0];
 
 const artifactContent = fs.readFileSync("./artifacts.json", "utf-8")
 
-console.log(artifactContent)
-
 const artifacts: string[] = JSON.parse(artifactContent);
 
 (async function(){
@@ -18,6 +16,8 @@ const artifacts: string[] = JSON.parse(artifactContent);
             content = fs.readFileSync(artifact, "utf-8")
         }
         const filename = path.basename(artifact, ".json")
-        fs.writeFileSync(path.join(destination, filename + ".ts"), `const artifact = ${content.trimEnd()} as const; export default artifact;`)
+        const file = path.join(destination, filename + ".ts")
+        fs.writeFileSync(file, `const artifact = ${content.trimEnd()} as const; export default artifact;`)
+        console.log(`Created/updated ${file}`)
     }
 })()
