@@ -1,5 +1,5 @@
-import {Contract, Web3} from "web3";
-import ERC20 from "./artifacts/ERC20"
+import { Contract, Web3 } from "web3";
+import ERC20 from "./artifacts/ERC20";
 
 (async function() {
     const web3 = new Web3("https://goerli.infura.io/v3/fd1f29ab70844ef48e644489a411d4b3")
